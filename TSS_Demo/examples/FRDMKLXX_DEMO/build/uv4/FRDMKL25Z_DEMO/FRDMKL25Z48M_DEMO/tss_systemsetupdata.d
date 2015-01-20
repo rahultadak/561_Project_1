@@ -1,0 +1,15 @@
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_SystemSetupData.c
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\frdmkl25z48m\TSS_SystemSetup.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\TSS_SystemSetupGlobal.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_API.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_StatusCodes.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_DataTypes.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_Sensor.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\frdmkl25z48m\derivative.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\mcu_init\cpu\arm_cm0.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_API.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\..\..\LIB\shared\TSS_SystemSetupVal.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\frdmkl25z48m\derivative.h
+.\frdmkl25z48m_demo\tss_systemsetupdata.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
