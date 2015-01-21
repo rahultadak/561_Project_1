@@ -31,6 +31,9 @@
 
 extern uint16_t u16LPcounter;
 
+/* Defining the global brightness variable here */
+uint8_t TSS_Brightness = 0;
+
 /**
  * \brief TSS callback for control 0
  *
@@ -50,10 +53,13 @@ extern uint16_t u16LPcounter;
  */
 void TSS1_fCallBack1(TSS_CONTROL_ID u8ControlId)
 {
+	//Setting the global brightness variable
+	TSS_Brightness = cASlider1.Position;
+	
   /* Set LED brightness */
-  SET_LED_RED(cASlider1.Position);
-  SET_LED_GREEN(cASlider1.Position);
-  SET_LED_BLUE(cASlider1.Position);
+  //SET_LED_RED(TSS_Brightness);
+  //SET_LED_GREEN(TSS_Brightness);
+  //SET_LED_BLUE(TSS_Brightness);
 
   (void)u8ControlId;
 }

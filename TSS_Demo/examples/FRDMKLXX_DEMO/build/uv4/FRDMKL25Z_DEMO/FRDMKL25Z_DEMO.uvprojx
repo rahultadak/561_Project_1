@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>FREEDOM, FRDM_KL25Z48</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\drivers\uart;..\..\..\src\mcu_init\drivers\wdog;..\..\..\src\module_id;..\..\..\src\frdmkl25z48m;..\..\..\..\..\GUI\source\src_common;..\..\..\..\..\GUI\source\src_platforms\Kxx;..\..\..\..\..\LIB\shared;..\..\..\..\..\LIB\lib_uv4;..\..\..\src\mcu_init\common;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\platforms;..\..\..\src\mcu_init\drivers\mcg</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\drivers\uart;..\..\..\src\mcu_init\drivers\wdog;..\..\..\src\module_id;..\..\..\src\frdmkl25z48m;..\..\..\..\..\GUI\source\src_common;..\..\..\..\..\GUI\source\src_platforms\Kxx;..\..\..\..\..\LIB\shared;..\..\..\..\..\LIB\lib_uv4;..\..\..\src\mcu_init\common;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\platforms;..\..\..\src\mcu_init\drivers\mcg;..\..\..\src\accel</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -737,6 +737,28 @@
         </Group>
         <Group>
           <GroupName>Accelerometer Module</GroupName>
+          <Files>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\accel\delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\accel\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>LEDs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\accel\LEDs.c</FilePath>
+            </File>
+            <File>
+              <FileName>mma8451.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\accel\mma8451.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

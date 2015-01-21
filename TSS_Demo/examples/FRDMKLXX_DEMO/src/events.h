@@ -33,6 +33,9 @@
   void TSS1_fCallBack0(TSS_CONTROL_ID u8ControlId);
   void TSS1_fOnFault(uint8_t);
   void TSS1_fOnInit(void);
+		
+	//Variable to glabally share the brightness that is set by the slider
+	extern uint8_t TSS_Brightness;
 #ifdef __cplusplus
   }
 #endif

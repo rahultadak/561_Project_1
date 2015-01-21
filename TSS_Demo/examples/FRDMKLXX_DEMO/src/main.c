@@ -74,6 +74,16 @@ int main (void)
   TSS_Init_ASlider();
   /* Init PWM for LED control */
   PWM_init();
+	/* Init Accelerometer */
+	i2c_init();																/* init i2c	*/
+	if (!init_mma()) {												/* init mma peripheral */
+		Control_RGB_LEDs(1, 0, 0);							/* Light red error LED */
+		while (1)																/* not able to initialize mma */
+			;
+	}
+	
+	Delay(1000);
+	
   #if TSS_USE_FREEMASTER_GUI
     FreeMASTER_Init();
   #endif
@@ -96,5 +106,19 @@ int main (void)
     }
 
     /* Write your code here ... */
+		read_full_xyz();
+		convert_xyz_to_roll_pitch();
+		// Light green LED if pitch > 10 degrees
+		// Light blue LED if roll > 10 degrees
+		/*
+		Control_RGB_LEDs((fabs(roll) > 10 | fabs(pitch) > 10)? 1:0,\
+			(fabs(roll) > 10 | fabs(pitch) > 10)? 1:0,\
+			(fabs(roll) > 10 | fabs(pitch) > 10)? 1:0);
+		*/
+		//Control_RGB_LEDs(0,fabs(roll) > 33? 1:0,fabs(roll) > 33? 1:0);
+		SET_LED_RED((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
+		SET_LED_GREEN((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
+		SET_LED_BLUE((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
+		
   }
 }
