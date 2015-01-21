@@ -92,7 +92,7 @@ void TSS_Init_ASlider(void)
   #endif
 
   /* Configure the range */
-  (void)TSS_SetASliderConfig(cASlider1.ControlId, ASlider_Range_Register, 255);
+  (void)TSS_SetASliderConfig(cASlider1.ControlId, ASlider_Range_Register, 200);
   /* Configure the TSS to report the touch, release and movement events */
   (void)TSS_SetASliderConfig(cASlider1.ControlId, ASlider_Events_Register, (TSS_ASLIDER_MOVEMENT_EVENT_EN_MASK | TSS_ASLIDER_INITIAL_TOUCH_EVENT_EN_MASK));
   /* Enables Callback function. Enables the control */

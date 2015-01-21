@@ -59,7 +59,7 @@
 
 /* LED Control Macros */
 #define TPM_Cn_MODE        (TPM_CnSC_MSB_MASK | TPM_CnSC_ELSA_MASK)
-#define TPM_MODULE         255
+#define TPM_MODULE         200
 #define TPM_INIT_VAL       0
 #define SET_LED_GREEN(x)   TPM2_C1V = (x)
 #define SET_LED_RED(x)     TPM2_C0V = (x)

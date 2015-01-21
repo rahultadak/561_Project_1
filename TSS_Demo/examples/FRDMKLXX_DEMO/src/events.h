@@ -35,7 +35,8 @@
   void TSS1_fOnInit(void);
 		
 	//Variable to glabally share the brightness that is set by the slider
-	extern uint8_t TSS_Brightness;
+	extern uint8_t trigger;
+	extern int step_delay;
 #ifdef __cplusplus
   }
 #endif

@@ -71,8 +71,8 @@ void convert_xyz_to_roll_pitch(void) {
 				ay = acc_Y/COUNTS_PER_G,
 				az = acc_Z/COUNTS_PER_G;
 	
-	roll = atan2(ay, az)*180/M_PI;
-	pitch = atan2(ax, sqrt(ay*ay + az*az))*180/M_PI;
+	roll = fabs(atan2(ay, az)*180/M_PI);
+	pitch = fabs(atan2(ax, sqrt(ay*ay + az*az))*180/M_PI);
 	
 }
 

@@ -67,6 +67,9 @@ uint16_t u16LPcounter = 0u;
  *
  * \return int
  */
+
+uint8_t accel_trig_level,i;
+float prev_roll, prev_pitch;
 int main (void)
 {
   InitPorts();
@@ -77,12 +80,13 @@ int main (void)
 	/* Init Accelerometer */
 	i2c_init();																/* init i2c	*/
 	if (!init_mma()) {												/* init mma peripheral */
-		Control_RGB_LEDs(1, 0, 0);							/* Light red error LED */
+		SET_LED_RED(127);
+		//Control_RGB_LEDs(1, 0, 0);							/* Light red error LED */
 		while (1)																/* not able to initialize mma */
 			;
 	}
 	
-	Delay(1000);
+	//Delay(1000);
 	
   #if TSS_USE_FREEMASTER_GUI
     FreeMASTER_Init();
@@ -91,34 +95,55 @@ int main (void)
   EnableInterrupts();
   /* Reset Low Power Counter flag */
   u16LPcounter = 0u;
-
   for(;;)
   {
-    #if TSS_USE_FREEMASTER_GUI
-      FMSTR_Poll();
-    #endif
-
     if (TSS_Task() == TSS_STATUS_OK)
     {
-      #if (LOW_POWER_TSI)
-        LowPowerControl();
-      #endif
-    }
+		}
 
-    /* Write your code here ... */
+
+		/* Calculating angle of the board */
 		read_full_xyz();
 		convert_xyz_to_roll_pitch();
-		// Light green LED if pitch > 10 degrees
-		// Light blue LED if roll > 10 degrees
-		/*
-		Control_RGB_LEDs((fabs(roll) > 10 | fabs(pitch) > 10)? 1:0,\
-			(fabs(roll) > 10 | fabs(pitch) > 10)? 1:0,\
-			(fabs(roll) > 10 | fabs(pitch) > 10)? 1:0);
-		*/
-		//Control_RGB_LEDs(0,fabs(roll) > 33? 1:0,fabs(roll) > 33? 1:0);
-		SET_LED_RED((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
-		SET_LED_GREEN((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
-		SET_LED_BLUE((fabs(roll) > 33 | fabs(pitch) > 33)? TSS_Brightness:0);
 		
+		//set trigger if angle changes
+		if ((roll > 33 || pitch > 33)&&(roll != prev_roll && pitch != prev_pitch))
+		{
+			for (i=0; i<cASlider1.Position;i++) 
+			{
+				DelayMS(step_delay);
+				SET_LED_RED(i);
+				SET_LED_GREEN(i);
+				SET_LED_BLUE(i);
+			}
+			
+			//Dummy code, add 10 second interval here.
+			//Delay(1000);
+		}
+			//TSS_Brightness = 0;
+			//accel_trig_level = 0;
+			//SET_LED_RED(accel_trig_level);
+			//SET_LED_GREEN(accel_trig_level);
+			//SET_LED_BLUE(accel_trig_level);
+		else if((prev_roll >= 33 || prev_pitch >= 33) && (roll < 33 && pitch < 33))
+		{
+			for (i=cASlider1.Position; i>0;i--) 
+			{
+				DelayMS(step_delay);
+				SET_LED_RED(i);
+				SET_LED_GREEN(i);
+				SET_LED_BLUE(i);
+			}
+		}
+		else
+		{
+			SET_LED_RED(0);
+			SET_LED_GREEN(0);
+			SET_LED_BLUE(0);	
+		}
+
+    /* Write your code here ... */
+		prev_roll = roll;
+		prev_pitch = pitch;
   }
 }
