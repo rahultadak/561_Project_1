@@ -91,6 +91,6 @@ void LowBattWarn_ON(void)
 
 uint8_t LowBattCheck(void)
 {
-	LowBattery = Measure_VRail() > 3.2 ? 1:0;
+	LowBattery = Measure_VRail() < 3.2 ? 1:0;
 	return LowBattery;
 }

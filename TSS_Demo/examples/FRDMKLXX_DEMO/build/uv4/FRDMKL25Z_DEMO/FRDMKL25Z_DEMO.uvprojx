@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>FREEDOM, FRDM_KL25Z48</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\drivers\uart;..\..\..\src\mcu_init\drivers\wdog;..\..\..\src\module_id;..\..\..\src\frdmkl25z48m;..\..\..\..\..\GUI\source\src_common;..\..\..\..\..\GUI\source\src_platforms\Kxx;..\..\..\..\..\LIB\shared;..\..\..\..\..\LIB\lib_uv4;..\..\..\src\mcu_init\common;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\platforms;..\..\..\src\mcu_init\drivers\mcg;..\..\..\src\accel</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\drivers\uart;..\..\..\src\mcu_init\drivers\wdog;..\..\..\src\module_id;..\..\..\src\frdmkl25z48m;..\..\..\..\..\GUI\source\src_common;..\..\..\..\..\GUI\source\src_platforms\Kxx;..\..\..\..\..\LIB\shared;..\..\..\..\..\LIB\lib_uv4;..\..\..\src\mcu_init\common;..\..\..\src\mcu_init\cpu;..\..\..\src\mcu_init\platforms;..\..\..\src\mcu_init\drivers\mcg;..\..\..\src\project1</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -688,11 +688,6 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\src\frdmkl25z48m\TSS_SystemSetup.h</FilePath>
             </File>
-            <File>
-              <FileName>project1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\project1.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -741,27 +736,42 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Accelerometer Module</GroupName>
+          <GroupName>Project 1</GroupName>
           <Files>
+            <File>
+              <FileName>project1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\project1.c</FilePath>
+            </File>
             <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\accel\delay.c</FilePath>
+              <FilePath>..\..\..\src\project1\delay.c</FilePath>
             </File>
             <File>
               <FileName>i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\accel\i2c.c</FilePath>
+              <FilePath>..\..\..\src\project1\i2c.c</FilePath>
             </File>
             <File>
               <FileName>LEDs.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\accel\LEDs.c</FilePath>
+              <FilePath>..\..\..\src\project1\LEDs.c</FilePath>
             </File>
             <File>
               <FileName>mma8451.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\accel\mma8451.c</FilePath>
+              <FilePath>..\..\..\src\project1\mma8451.c</FilePath>
+            </File>
+            <File>
+              <FileName>timers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\project1\timers.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\project1\ADC.c</FilePath>
             </File>
           </Files>
         </Group>
