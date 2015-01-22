@@ -15,3 +15,5 @@
 .\frdmkl25z48m_demo\events.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\events.o: ..\..\..\src\app_init.h
 .\frdmkl25z48m_demo\events.o: ..\..\..\src\events.h
+.\frdmkl25z48m_demo\events.o: ..\..\..\src\project1.h
+.\frdmkl25z48m_demo\events.o: ..\..\..\src\project1\timers.h

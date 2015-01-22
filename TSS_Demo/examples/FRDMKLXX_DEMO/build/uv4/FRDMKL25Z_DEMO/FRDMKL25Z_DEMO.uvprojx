@@ -688,6 +688,11 @@
               <FileType>5</FileType>
               <FilePath>..\..\..\src\frdmkl25z48m\TSS_SystemSetup.h</FilePath>
             </File>
+            <File>
+              <FileName>project1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\project1.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

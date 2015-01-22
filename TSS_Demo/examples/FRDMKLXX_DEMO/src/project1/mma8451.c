@@ -5,7 +5,7 @@
 #include <math.h>
 
 int16_t acc_X=0, acc_Y=0, acc_Z=0;
-float roll=0.0, pitch=0.0;
+uint8_t roll=0, pitch=0;
 
 //mma data ready
 extern uint32_t DATA_READY;
@@ -71,8 +71,8 @@ void convert_xyz_to_roll_pitch(void) {
 				ay = acc_Y/COUNTS_PER_G,
 				az = acc_Z/COUNTS_PER_G;
 	
-	roll = fabs(atan2(ay, az)*180/M_PI);
-	pitch = fabs(atan2(ax, sqrt(ay*ay + az*az))*180/M_PI);
+	roll = (uint8_t)fabs(atan2(ay, az)*180/M_PI);
+	pitch = (uint8_t)fabs(atan2(ax, sqrt(ay*ay + az*az))*180/M_PI);
 	
 }
 

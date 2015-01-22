@@ -36,14 +36,14 @@
 #include "i2c.h"
 #include "mma8451.h"
 #include "delay.h"
+
+#include "project1.h"
+#include "timers.h"
+
 uint16_t u16LPcounter = 0u;
 
 /*********************** GUI - FreeMASTER TSA table ************************/
 
-#include "LEDs.h"
-#include "i2c.h"
-#include "mma8451.h"
-#include "delay.h"
 
 #if FMSTR_USE_TSA
   /* Example of FreeMASTER User Application Table */
@@ -68,8 +68,7 @@ uint16_t u16LPcounter = 0u;
  * \return int
  */
 
-uint8_t accel_trig_level,i;
-float prev_roll, prev_pitch;
+uint8_t BoardTilted;
 int main (void)
 {
   InitPorts();
@@ -86,8 +85,8 @@ int main (void)
 			;
 	}
 	
-	//Delay(1000);
-	
+	Init_PIT(119999999); //TODO Debug set only to 3 seconds, change to 10 seconds
+		
   #if TSS_USE_FREEMASTER_GUI
     FreeMASTER_Init();
   #endif
@@ -95,55 +94,32 @@ int main (void)
   EnableInterrupts();
   /* Reset Low Power Counter flag */
   u16LPcounter = 0u;
-  for(;;)
+	BoardTilted = 0;
+  while(1)
   {
     if (TSS_Task() == TSS_STATUS_OK)
     {
 		}
-
-
 		/* Calculating angle of the board */
 		read_full_xyz();
 		convert_xyz_to_roll_pitch();
-		
 		//set trigger if angle changes
-		if ((roll > 33 || pitch > 33)&&(roll != prev_roll && pitch != prev_pitch))
-		{
-			for (i=0; i<cASlider1.Position;i++) 
-			{
-				DelayMS(step_delay);
-				SET_LED_RED(i);
-				SET_LED_GREEN(i);
-				SET_LED_BLUE(i);
-			}
-			
+		if ((roll>33||pitch>33)&&(BoardTilted==0))
+		{	
+			BoardTilted = 1;
+			FadeIn(0,SliderPos,step_delay);
 			//Dummy code, add 10 second interval here.
-			//Delay(1000);
+			//Timer with interrupt
+			// Delay Period = 239999999
+			Start_PIT();
 		}
-			//TSS_Brightness = 0;
-			//accel_trig_level = 0;
-			//SET_LED_RED(accel_trig_level);
-			//SET_LED_GREEN(accel_trig_level);
-			//SET_LED_BLUE(accel_trig_level);
-		else if((prev_roll >= 33 || prev_pitch >= 33) && (roll < 33 && pitch < 33))
+		else if((roll<30&&pitch<30)&&(BoardTilted==1))
 		{
-			for (i=cASlider1.Position; i>0;i--) 
-			{
-				DelayMS(step_delay);
-				SET_LED_RED(i);
-				SET_LED_GREEN(i);
-				SET_LED_BLUE(i);
-			}
-		}
-		else
-		{
-			SET_LED_RED(0);
-			SET_LED_GREEN(0);
-			SET_LED_BLUE(0);	
+			Stop_PIT();
+			BoardTilted = 0;
+			FadeOut(SliderPos,0,step_delay);
 		}
 
     /* Write your code here ... */
-		prev_roll = roll;
-		prev_pitch = pitch;
   }
 }

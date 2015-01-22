@@ -29,12 +29,11 @@
 #include "app_init.h"
 #include "events.h"
 
+#include "project1.h"
+#include "timers.h"
+
 extern uint16_t u16LPcounter;
-
-/* Defining the global brightness variable here */
-uint8_t trigger = 0;
-int step_delay = 0;
-
+int prevSliderPos = 0;
 /**
  * \brief TSS callback for control 0
  *
@@ -54,24 +53,29 @@ int step_delay = 0;
  */
 void TSS1_fCallBack1(TSS_CONTROL_ID u8ControlId)
 {
-	int i;
-	int k = cASlider1.Position;
-	step_delay = 1000/cASlider1.Position;
-	if(step_delay > 1000)
-		step_delay = 1000;
-	for (i=0; i<cASlider1.Position;i++) 
-		{
-			DelayMS(step_delay);
-			SET_LED_RED(i);
-			SET_LED_GREEN(i);
-			SET_LED_BLUE(i);
-		}
-  /* Set LED brightness */
-  //SET_LED_RED(TSS_Brightness);
-  //SET_LED_GREEN(TSS_Brightness);
-  //SET_LED_BLUE(TSS_Brightness);
+	//Turn off timer here
+	Stop_PIT();
+		
+	if (cASlider1.Position == 0)
+	{
+		SetLEDs(0,0,0);
+		SliderPos = 50;
+		return;
+	}
+	else
+		SliderPos = cASlider1.Position;
+	
+	step_delay = SliderPos >= 1 ? 1000/SliderPos:1000;
 
-  //(void)u8ControlId;
+	if(LED_on==1)
+		SetLEDs(SliderPos,SliderPos,SliderPos);
+	
+	FadeIn(0,SliderPos,step_delay);
+	//DelayMS(1000);
+	//Restart Timer here
+	Start_PIT();
+	prevSliderPos = SliderPos;
+		//(void)u8ControlId;
 }
 
 /**
