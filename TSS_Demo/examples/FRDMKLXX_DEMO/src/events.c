@@ -54,7 +54,7 @@ int prevSliderPos = 0;
 void TSS1_fCallBack1(TSS_CONTROL_ID u8ControlId)
 {
 	//Turn off timer here
-	Stop_PIT();
+	Stop_PIT0();
 		
 	if (cASlider1.Position == 0)
 	{
@@ -73,7 +73,7 @@ void TSS1_fCallBack1(TSS_CONTROL_ID u8ControlId)
 	FadeIn(0,SliderPos,step_delay);
 	//DelayMS(1000);
 	//Restart Timer here
-	Start_PIT();
+	Start_PIT0();
 	prevSliderPos = SliderPos;
 		//(void)u8ControlId;
 }

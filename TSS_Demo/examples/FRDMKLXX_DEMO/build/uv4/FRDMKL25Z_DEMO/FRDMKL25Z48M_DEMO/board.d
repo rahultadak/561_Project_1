@@ -11,16 +11,10 @@
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\mcu_init\cpu\arm_cm0.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\..\..\LIB\shared\TSS_API.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\mcu_init\drivers\uart\uart_kl25.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\board.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\app_init.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\..\..\GUI\source\src_platforms\Kxx\freemaster.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\..\..\GUI\source\src_common\freemaster_defcfg.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\freemaster_cfg.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\..\..\GUI\source\src_common\freemaster_tsa.h
 .\frdmkl25z48m_demo\board.o: ..\..\..\src\main.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\board.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h

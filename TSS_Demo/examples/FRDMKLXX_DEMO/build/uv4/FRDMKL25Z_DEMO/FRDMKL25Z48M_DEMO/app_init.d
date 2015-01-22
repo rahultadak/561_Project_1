@@ -11,10 +11,6 @@
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\src\mcu_init\cpu\arm_cm0.h
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\..\..\LIB\shared\TSS_API.h
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\src\frdmkl25z48m\board.h
-.\frdmkl25z48m_demo\app_init.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\app_init.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\src\main.h
-.\frdmkl25z48m_demo\app_init.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\app_init.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\src\mcu_init\drivers\wdog\wdog.h
 .\frdmkl25z48m_demo\app_init.o: ..\..\..\src\app_init.h

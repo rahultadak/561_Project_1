@@ -7,11 +7,12 @@
   void FadeIn(int start,int end, int delay);
   void FadeOut(int start,int end, int delay);
 	void SetLEDs(int R, int G, int B);
-	
+	void LowBattWarn_ON(void);
+	uint8_t LowBattCheck(void);
+		
 	//Variable to globally share the brightness that is set by the slider
-	extern uint8_t SliderPos;
+	extern uint8_t SliderPos,LED_on,LowBattery;
 	extern uint16_t step_delay;
-	extern int LED_on;
 #ifdef __cplusplus
   }
 #endif

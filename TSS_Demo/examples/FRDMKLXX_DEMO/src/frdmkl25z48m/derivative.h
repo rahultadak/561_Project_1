@@ -24,6 +24,9 @@
 *
 *END************************************************************************/
 
+#ifndef KL25Z_DERIVATIVE_H
+#define KL25Z_DERIVATIVE_H
 /* Include the derivative-specific header file */
 #include <MKL25Z4.h>
 #include "arm_cm0.h"
+#endif

@@ -14,14 +14,10 @@
 .\frdmkl25z48m_demo\main.o: ..\..\..\..\..\GUI\source\src_common\freemaster_defcfg.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\freemaster_cfg.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\frdmkl25z48m\board.h
-.\frdmkl25z48m_demo\main.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\main.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\..\..\GUI\source\src_common\freemaster_tsa.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\app_init.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\events.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\main.h
-.\frdmkl25z48m_demo\main.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\main.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\project1\LEDs.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\project1\i2c.h
@@ -29,3 +25,4 @@
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\project1\delay.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\project1.h
 .\frdmkl25z48m_demo\main.o: ..\..\..\src\project1\timers.h
+.\frdmkl25z48m_demo\main.o: ..\..\..\src\project1\ADC.h

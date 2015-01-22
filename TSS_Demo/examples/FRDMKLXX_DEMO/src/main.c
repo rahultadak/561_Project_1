@@ -39,6 +39,7 @@
 
 #include "project1.h"
 #include "timers.h"
+#include "ADC.h"
 
 uint16_t u16LPcounter = 0u;
 
@@ -85,8 +86,25 @@ int main (void)
 			;
 	}
 	
-	Init_PIT(119999999); //TODO Debug set only to 3 seconds, change to 10 seconds
+	Init_PIT(119999999,119999999); //TODO Debug set only to 3 seconds, change to 10 seconds
 		
+	Init_ADC();
+	DelayMS(100); //Init Delay
+	
+	//Initialization complete signal
+	SET_LED_GREEN(100);
+	DelayMS(200);
+	SET_LED_GREEN(0);
+	DelayMS(200);
+	SET_LED_GREEN(100);
+	DelayMS(200);
+	SET_LED_GREEN(0);
+	DelayMS(200);
+	
+	//Checking status of battery to start signalling
+	if (LowBattCheck() == 1)
+		Start_PIT1();	
+
   #if TSS_USE_FREEMASTER_GUI
     FreeMASTER_Init();
   #endif
@@ -97,6 +115,7 @@ int main (void)
 	BoardTilted = 0;
   while(1)
   {
+		LowBattCheck();		
     if (TSS_Task() == TSS_STATUS_OK)
     {
 		}
@@ -108,14 +127,12 @@ int main (void)
 		{	
 			BoardTilted = 1;
 			FadeIn(0,SliderPos,step_delay);
-			//Dummy code, add 10 second interval here.
-			//Timer with interrupt
-			// Delay Period = 239999999
-			Start_PIT();
+			Start_PIT0();
 		}
-		else if((roll<30&&pitch<30)&&(BoardTilted==1))
+		else if((roll<=30&&pitch<=30)&&(BoardTilted==1))
 		{
-			Stop_PIT();
+			Stop_PIT0();
+			//DelayMS(150);
 			BoardTilted = 0;
 			FadeOut(SliderPos,0,step_delay);
 		}

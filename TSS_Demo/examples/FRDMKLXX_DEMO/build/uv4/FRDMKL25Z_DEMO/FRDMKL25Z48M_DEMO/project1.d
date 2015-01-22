@@ -12,6 +12,6 @@
 .\frdmkl25z48m_demo\project1.o: ..\..\..\..\..\LIB\shared\TSS_StatusCodes.h
 .\frdmkl25z48m_demo\project1.o: ..\..\..\..\..\LIB\shared\TSS_DataTypes.h
 .\frdmkl25z48m_demo\project1.o: ..\..\..\..\..\LIB\shared\TSS_Sensor.h
-.\frdmkl25z48m_demo\project1.o: ..\..\..\src\frdmkl25z48m\derivative.h
-.\frdmkl25z48m_demo\project1.o: ..\..\..\src\frdmkl25z48m\MKL25Z4.h
 .\frdmkl25z48m_demo\project1.o: ..\..\..\..\..\LIB\shared\TSS_API.h
+.\frdmkl25z48m_demo\project1.o: ..\..\..\src\project1\timers.h
+.\frdmkl25z48m_demo\project1.o: ..\..\..\src\project1\ADC.h
