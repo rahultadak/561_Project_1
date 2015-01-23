@@ -73,6 +73,7 @@ void PIT_IRQHandler() {
 		// Do ISR work
 		PIT_interrupt_counter++;
 		//Add Handler Code here
+		Stop_PIT0();
 		FadeOut(SliderPos,0,step_delay);
 	} 
 	else if (PIT->CHANNEL[1].TFLG & PIT_TFLG_TIF_MASK) 
@@ -87,47 +88,4 @@ void PIT_IRQHandler() {
 	} 
 }
 
-void Init_PWM()
-{
-	//turn on clock to TPM 
-	SIM->SCGC6 |= SIM_SCGC6_TPM0_MASK;
-	
-	//set multiplexer to connect TPM0 Ch 2 to PTA5
-	PORTA->PCR[5] |= PORT_PCR_MUX(3); 
-
-	// TPM0 Ch 4 to PTC8
-	PORTC->PCR[8] |= PORT_PCR_MUX(3);
-	
-	//set clock source for tpm
-	SIM->SOPT2 |= (SIM_SOPT2_TPMSRC(1) | SIM_SOPT2_PLLFLLSEL_MASK);
-
-	//load the counter and mod
-	TPM0->MOD = 60124;
-		
-	//set channels to center-aligned high-true PWM
-	//	TPM0->CONTROLS[1].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSB_MASK;
-	TPM0->CONTROLS[2].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSB_MASK;
-	TPM0->CONTROLS[4].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSB_MASK;
-
-	//set TPM to up-down and divide by 8 prescaler and clock mode
-	TPM0->SC = (TPM_SC_CPWMS_MASK | TPM_SC_CMOD(1) | TPM_SC_PS(3));
-	
-	//set trigger mode
-	TPM0->CONF |= TPM_CONF_TRGSEL(0xA);
-	
-	TPM0->CONTROLS[2].CnV = 0x3000;
-	TPM0->CONTROLS[4].CnV = 0x2000;
-	
-}
-
-void Set_PWM_Values(uint16_t perc1, uint16_t perc2) {
-	uint16_t n1, n2;
-	
-	n1 = perc1*55 + 1500;
-	n2 = perc2*55 + 1500;
-	
-	TPM0->CONTROLS[2].CnV = n1;
-	TPM0->CONTROLS[4].CnV = n2;
-	
-}
 // *******************************ARM University Program Copyright © ARM Ltd 2013*************************************   

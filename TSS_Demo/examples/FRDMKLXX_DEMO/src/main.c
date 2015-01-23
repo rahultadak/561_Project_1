@@ -69,7 +69,6 @@ uint16_t u16LPcounter = 0u;
  * \return int
  */
 
-uint8_t BoardTilted;
 int main (void)
 {
   InitPorts();
@@ -112,7 +111,6 @@ int main (void)
   EnableInterrupts();
   /* Reset Low Power Counter flag */
   u16LPcounter = 0u;
-	BoardTilted = 0;
   while(1)
   {
 		LowBattCheck();		
@@ -125,9 +123,9 @@ int main (void)
 		//set trigger if angle changes
 		if ((roll>33||pitch>33)&&(BoardTilted==0))
 		{	
-			BoardTilted = 1;
 			FadeIn(0,SliderPos,step_delay);
 			Start_PIT0();
+			BoardTilted = 1;
 		}
 		else if((roll<=30&&pitch<=30)&&(BoardTilted==1))
 		{

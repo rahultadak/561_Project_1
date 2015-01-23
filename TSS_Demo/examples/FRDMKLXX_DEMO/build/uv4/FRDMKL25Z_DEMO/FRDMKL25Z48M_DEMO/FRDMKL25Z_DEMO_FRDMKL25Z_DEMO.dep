@@ -15,7 +15,7 @@ I (..\..\..\src\main.h)(0x521645DE)
 I (..\..\..\src\mcu_init\drivers\wdog\wdog.h)(0x50F5FB40)
 I (..\..\..\src\app_init.h)(0x518BEC48)
 F (..\..\..\src\app_init.h)(0x518BEC48)()
-F (..\..\..\src\events.c)(0x54C096A2)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\events.o --omf_browse .\frdmkl25z48m_demo\events.crf --depend .\frdmkl25z48m_demo\events.d)
+F (..\..\..\src\events.c)(0x54C1FCA8)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\events.o --omf_browse .\frdmkl25z48m_demo\events.crf --depend .\frdmkl25z48m_demo\events.d)
 I (..\..\..\..\..\LIB\shared\TSS_API.h)(0x51F64E2C)
 I (..\..\..\src\frdmkl25z48m\TSS_SystemSetup.h)(0x51BF50A2)
 I (..\..\..\src\TSS_SystemSetupGlobal.h)(0x54BDBB9B)
@@ -29,8 +29,8 @@ I (..\..\..\src\mcu_init\cpu\arm_cm0.h)(0x50F5FB3E)
 I (..\..\..\src\frdmkl25z48m\board.h)(0x54C09829)
 I (..\..\..\src\app_init.h)(0x518BEC48)
 I (..\..\..\src\events.h)(0x54C01B72)
-I (..\..\..\src\project1.h)(0x54C0A632)
-I (..\..\..\src\project1\timers.h)(0x54C09518)
+I (..\..\..\src\project1.h)(0x54C1F7DB)
+I (..\..\..\src\project1\timers.h)(0x54C1F08C)
 F (..\..\..\src\events.h)(0x54C01B72)()
 F (..\..\..\..\..\GUI\source\src_common\freemaster_appcmd.c)(0x50F5FC48)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\freemaster_appcmd.o --omf_browse .\frdmkl25z48m_demo\freemaster_appcmd.crf --depend .\frdmkl25z48m_demo\freemaster_appcmd.d)
 I (..\..\..\..\..\GUI\source\src_platforms\Kxx\freemaster.h)(0x5182715C)
@@ -284,7 +284,7 @@ F (..\..\..\..\..\LIB\shared\TSS_SystemSetupVal.h)(0x51F64E2E)()
 F (..\..\..\..\..\LIB\shared\TSS_Timer.h)(0x51F64E2E)()
 F (..\..\..\..\..\LIB\lib_uv4\TSS_KXX_M0.lib)(0x520E17C4)()
 F (..\..\..\src\freemaster_cfg.h)(0x518BEC48)()
-F (..\..\..\src\main.c)(0x54C0A33B)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\main.o --omf_browse .\frdmkl25z48m_demo\main.crf --depend .\frdmkl25z48m_demo\main.d)
+F (..\..\..\src\main.c)(0x54C1F9DE)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\main.o --omf_browse .\frdmkl25z48m_demo\main.crf --depend .\frdmkl25z48m_demo\main.d)
 I (..\..\..\..\..\LIB\shared\TSS_API.h)(0x51F64E2C)
 I (..\..\..\src\frdmkl25z48m\TSS_SystemSetup.h)(0x51BF50A2)
 I (..\..\..\src\TSS_SystemSetupGlobal.h)(0x54BDBB9B)
@@ -308,8 +308,8 @@ I (..\..\..\src\project1\LEDs.h)(0x54BDE765)
 I (..\..\..\src\project1\i2c.h)(0x54BDB83A)
 I (..\..\..\src\project1\mma8451.h)(0x54C037C9)
 I (..\..\..\src\project1\delay.h)(0x54BDB83A)
-I (..\..\..\src\project1.h)(0x54C0A632)
-I (..\..\..\src\project1\timers.h)(0x54C09518)
+I (..\..\..\src\project1.h)(0x54C1F7DB)
+I (..\..\..\src\project1\timers.h)(0x54C1F08C)
 I (..\..\..\src\project1\ADC.h)(0x54C0A63F)
 F (..\..\..\src\main.h)(0x521645DE)()
 F (..\..\..\src\frdmkl25z48m\isr.h)(0x518BEC48)()
@@ -342,9 +342,9 @@ I (..\..\..\src\freemaster_cfg.h)(0x518BEC48)
 I (..\..\..\..\..\GUI\source\src_common\freemaster_tsa.h)(0x5182715C)
 I (..\..\..\src\main.h)(0x521645DE)
 F (..\..\..\src\frdmkl25z48m\board.h)(0x54C09829)()
-F (..\..\..\src\project1.c)(0x54C0ACB0)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\project1.o --omf_browse .\frdmkl25z48m_demo\project1.crf --depend .\frdmkl25z48m_demo\project1.d)
+F (..\..\..\src\project1.c)(0x54C1FFA5)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\project1.o --omf_browse .\frdmkl25z48m_demo\project1.crf --depend .\frdmkl25z48m_demo\project1.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476A9D0)
-I (..\..\..\src\project1.h)(0x54C0A632)
+I (..\..\..\src\project1.h)(0x54C1F7DB)
 I (..\..\..\src\app_init.h)(0x518BEC48)
 I (..\..\..\src\frdmkl25z48m\board.h)(0x54C09829)
 I (..\..\..\src\frdmkl25z48m\derivative.h)(0x54C0978A)
@@ -356,7 +356,7 @@ I (..\..\..\src\TSS_SystemSetupGlobal.h)(0x54BDBB9B)
 I (..\..\..\..\..\LIB\shared\TSS_StatusCodes.h)(0x51F64E2E)
 I (..\..\..\..\..\LIB\shared\TSS_DataTypes.h)(0x520CF056)
 I (..\..\..\..\..\LIB\shared\TSS_Sensor.h)(0x520A6420)
-I (..\..\..\src\project1\timers.h)(0x54C09518)
+I (..\..\..\src\project1\timers.h)(0x54C1F08C)
 I (..\..\..\src\project1\ADC.h)(0x54C0A63F)
 F (..\..\..\src\project1\delay.c)(0x54BDE632)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\delay.o --omf_browse .\frdmkl25z48m_demo\delay.crf --depend .\frdmkl25z48m_demo\delay.d)
 I (..\..\..\src\project1\MKL25Z4_accel.h)(0x5346E004)
@@ -392,15 +392,15 @@ I (..\..\..\src\project1\mma8451.h)(0x54C037C9)
 I (..\..\..\src\project1\i2c.h)(0x54BDB83A)
 I (..\..\..\src\project1\delay.h)(0x54BDB83A)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5476A9CE)
-F (..\..\..\src\project1\timers.c)(0x54C0AB45)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\timers.o --omf_browse .\frdmkl25z48m_demo\timers.crf --depend .\frdmkl25z48m_demo\timers.d)
-I (..\..\..\src\project1\timers.h)(0x54C09518)
+F (..\..\..\src\project1\timers.c)(0x54C1FF26)(-c --cpu Cortex-M0+ -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork -I..\..\..\src -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\drivers\uart -I..\..\..\src\mcu_init\drivers\wdog -I..\..\..\src\module_id -I..\..\..\src\frdmkl25z48m -I..\..\..\..\..\GUI\source\src_common -I..\..\..\..\..\GUI\source\src_platforms\Kxx -I..\..\..\..\..\LIB\shared -I..\..\..\..\..\LIB\lib_uv4 -I..\..\..\src\mcu_init\common -I..\..\..\src\mcu_init\cpu -I..\..\..\src\mcu_init\platforms -I..\..\..\src\mcu_init\drivers\mcg -I..\..\..\src\project1-I "C:\Users\Rahul\Documents\ECE 561\Projects\561_Project_1\TSS_Demo\examples\FRDMKLXX_DEMO\build\uv4\FRDMKL25Z_DEMO\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="513" -DMKL24Z32xxx4 -DFREEDOM -DFRDM_KL25Z48-o .\frdmkl25z48m_demo\timers.o --omf_browse .\frdmkl25z48m_demo\timers.crf --depend .\frdmkl25z48m_demo\timers.d)
+I (..\..\..\src\project1\timers.h)(0x54C1F08C)
 I (..\..\..\src\project1\MKL25Z4_accel.h)(0x5346E004)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cm0plus.h)(0x5346E234)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476A9D0)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h)(0x5346E234)
 I (C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h)(0x5346E234)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.4.0\Device\Include\system_MKL25Z4.h)(0x51684E9E)
-I (..\..\..\src\project1.h)(0x54C0A632)
+I (..\..\..\src\project1.h)(0x54C1F7DB)
 I (..\..\..\src\frdmkl25z48m\board.h)(0x54C09829)
 I (..\..\..\src\frdmkl25z48m\derivative.h)(0x54C0978A)
 I (..\..\..\src\frdmkl25z48m\MKL25Z4.h)(0x50F5FB42)

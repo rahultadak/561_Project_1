@@ -66,9 +66,6 @@ void TSS1_fCallBack1(TSS_CONTROL_ID u8ControlId)
 		SliderPos = cASlider1.Position;
 	
 	step_delay = SliderPos >= 1 ? 1000/SliderPos:1000;
-
-	if(LED_on==1)
-		SetLEDs(SliderPos,SliderPos,SliderPos);
 	
 	FadeIn(0,SliderPos,step_delay);
 	//DelayMS(1000);

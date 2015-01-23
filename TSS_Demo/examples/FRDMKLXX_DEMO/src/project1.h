@@ -11,8 +11,9 @@
 	uint8_t LowBattCheck(void);
 		
 	//Variable to globally share the brightness that is set by the slider
-	extern uint8_t SliderPos,LED_on,LowBattery;
+	extern uint8_t SliderPos,LED_on,LowBattery,LowBattWarned;
 	extern uint16_t step_delay;
+	extern uint8_t BoardTilted;
 #ifdef __cplusplus
   }
 #endif

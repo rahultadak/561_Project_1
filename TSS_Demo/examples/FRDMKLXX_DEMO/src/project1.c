@@ -11,12 +11,27 @@ uint8_t SliderPos = 50;
 uint16_t step_delay = 20;
 uint8_t LED_on = 0;
 uint8_t LowBattery = 0;
+uint8_t LowBattWarned = 0;
+uint8_t BoardTilted = 0;
+
 void FadeIn(int start,int end, int delay)
 {
 	LowBattWarn_ON();
 	Stop_PIT1();
+		
 	if (LED_on == 1)
-		return;
+	{
+		SetLEDs(SliderPos,SliderPos,SliderPos);
+		return;	
+	}
+	
+	if (BoardTilted == 1)
+	{
+		SetLEDs(SliderPos,SliderPos,SliderPos);
+		LED_on = 1;
+		return;	
+	}
+	
 	else
 	{
 		int i;
@@ -49,8 +64,13 @@ void FadeOut(int start, int end, int delay)
 		LED_on = 0;
 	}
 	
+	//Stop_PIT0();
+
 	if(LowBattery==1)
+	{
 		Start_PIT1();
+		LowBattWarned = 0;
+	}
 	
 	return;
 }
@@ -65,7 +85,7 @@ void SetLEDs(int R, int G, int B)
 
 void LowBattWarn_ON(void)
 {
-	if(LowBattery == 1 )
+	if(LowBattery == 1 && LowBattWarned==0)
 	{
 		//Stop the OFF state red flashing
 		Stop_PIT1();
@@ -81,10 +101,7 @@ void LowBattWarn_ON(void)
 		SET_LED_BLUE(0);
 		DelayMS(250);
 		
-		//Turn Off
-		SET_LED_RED(0);
-		SET_LED_GREEN(0);
-		SET_LED_BLUE(0);
+		LowBattWarned = 1;
 	}
 	return;
 	}
