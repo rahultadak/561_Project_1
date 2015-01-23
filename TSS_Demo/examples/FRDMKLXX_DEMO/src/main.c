@@ -85,7 +85,7 @@ int main (void)
 			;
 	}
 	
-	Init_PIT(119999999,119999999); //TODO Debug set only to 3 seconds, change to 10 seconds
+	Init_PIT(239999999,119999999); //TODO Debug set only to 3 seconds, change to 10 seconds
 		
 	Init_ADC();
 	DelayMS(100); //Init Delay
